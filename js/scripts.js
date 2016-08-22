@@ -21,14 +21,10 @@ $(document).ready(function() {
 
     $("ul#list-places").append("<li><span class='places'>" + newPlace.place + "</span></li>");
 
-    // $("input#new-location").val("");
-    // $("input#new-landmarks").val("");
-    // $("input#new-date").val("");
-    // $("input#new-notes").val("");
 
     $(".places").last().click(function() {
       $("#show-place").show();
-      $("show-place h2").text(newPlace.place);
+      $("#show-place h3").text(newPlace.place);
       $(".landmarks").text(newPlace.landmarks);
       $(".date").text(newPlace.date);
       $(".notes").text(newPlace.notes);
@@ -36,7 +32,7 @@ $(document).ready(function() {
 
   });
 
-
+//to do: add form clear functionality
 
 });
 

@@ -6,43 +6,54 @@
     <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title>Ping Pong</title>
+    <title>Places we've been</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="well text-center">Ping Pong</h1>
-      <form id="pong_form" class="" action="index.html" method="post">
-        <div class="form-group">
-          <div class="row">
-            <div class="rules col-sm-3">
-              <h3 class="page-header">Rules</h3>
-              <p>
-                Ping Pong will count up to your number with the given exceptions:
-                <ul>
-                  <li>Numbers divisible by 3 become "ping"</li>
-                  <li>Numbers divisible by 5 become "pong"</li>
-                  <li>Numbers divisible by 15 become "ping-pong"</li>
-                </ul>
-              </p>
-              <p class="text-center">
-                Have fun!
-              </p>
+      <h1>Trip Report</h1>
+
+       <div class="row">
+         <div class="col-md-6">
+           <h2>Add trip details:</h2>
+           <form id="new-trip">
+             <div class="form-group">
+               <label for="new-location">Location</label>
+               <input type="text" class="form-control" id="new-location">
+             </div>
+             <div class="form-group">
+               <label for="new-landmarks">Landmarks</label>
+               <input type="text" class="form-control" id="new-landmarks">
+             </div>
+             <div class="form-group">
+               <label for="new-date">Date</label>
+               <input type="text" class="form-control" id="new-date">
+             </div>
+             <div class="form-group">
+               <label for="new-notes">Notes</label>
+               <input type="text" class="form-control" id="new-notes">
+             </div>
+
+             <button type="submit" class="btn">Add</button>
+           </form>
+
+           <h2>Visited Places:</h2>
+           <ul id="list-places">
+
+           </ul>
+
+         </div>
+           <div class="col-md-6">
+            <div id="show-place">
+              <h2></h2>
+
+              <p>Place: <span class="places"></span></p>
+              <p>Landmarks: <span class="landmarks"></span></p>
+              <p>Date: <span class="date"></span></p>
+              <p>Notes: <span class="notes"></span></p>
             </div>
-            <div class="col-sm-3 col-sm-offset-1">
-              <h3 class="page-header">Let's Play!</h3>
-              <label for="">Please enter a number:</label>
-              <input id="num_input" required type="number" name="name" value="" class="format-control" autofocus="autofocus">
-              <br>
-              <button type="submit" class="btn btn-danger sm-space-above">Give Output!</button>
-                <ul id="pong_output" class="game-ul"></ul>
-            </div>
-          </div>
-        </div>
-      </form>
-      <footer class="navbar navbar-fixed-bottom">
-        <p>Created by: Caleb Paul</p>
-        <p>Contact: @calebpaulmusic</p>
-      </footer>
+           </div>
+
+       </div>
     </div>
   </body>
 </html>

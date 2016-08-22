@@ -1,3 +1,16 @@
 .container {
   width: 85%;
 }
+
+#show-place {
+  display: none;
+}
+
+.places {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.places:hover {
+  text-decoration: underline;
+}

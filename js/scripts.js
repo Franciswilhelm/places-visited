@@ -1,9 +1,9 @@
 //Business Logic
 function Place(location,landmarks,date,notes) {
-  this.locale = location;
-  this.marks = landmarks;
-  this.calender = date;
-  this.other = notes;
+  this.place = location;
+  this.landmarks = landmarks;
+  this.date = date;
+  this.notes = notes;
 }
 
 //User Logic
@@ -17,13 +17,27 @@ $(document).ready(function() {
     var userDate = $("input#new-date").val();
     var userNotes = $("input#new-notes").val();
 
-    var newPlace = new Place(userLocation);
+    var newPlace = new Place(userLocation, userLandmarks, userDate, userNotes);
 
-    $("ul#list-places").append("<li><span class='places'>" + newPlace.locale + "</span></li>");
+    $("ul#list-places").append("<li><span class='places'>" + newPlace.place + "</span></li>");
 
-    $("input#new-location").val("");
-    $("input#new-landmarks").val("");
-    $("input#new-date").val("");
-    $("input#new-notes").val("");
+    // $("input#new-location").val("");
+    // $("input#new-landmarks").val("");
+    // $("input#new-date").val("");
+    // $("input#new-notes").val("");
+
+    $(".places").last().click(function() {
+      $("#show-place").show();
+      $("show-place h2").text(newPlace.place);
+      $(".landmarks").text(newPlace.landmarks);
+      $(".date").text(newPlace.date);
+      $(".notes").text(newPlace.notes);
+
+
   });
+
+
+
+});
+
 });

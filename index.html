@@ -6,7 +6,7 @@
     <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title>Places we've been</title>
+    <title>Trip Report</title>
   </head>
   <body>
     <div class="container">
@@ -18,19 +18,19 @@
            <form id="new-trip">
              <div class="form-group">
                <label for="new-location">Location</label>
-               <input type="text" class="form-control" id="new-location">
+               <input type="text" class="form-control" id="new-location" value="PDX">
              </div>
              <div class="form-group">
                <label for="new-landmarks">Landmarks</label>
-               <input type="text" class="form-control" id="new-landmarks">
+               <input type="text" class="form-control" id="new-landmarks" value="Waterfront">
              </div>
              <div class="form-group">
                <label for="new-date">Date</label>
-               <input type="text" class="form-control" id="new-date">
+               <input type="text" class="form-control" id="new-date" value="Sep '16'">
              </div>
              <div class="form-group">
                <label for="new-notes">Notes</label>
-               <input type="text" class="form-control" id="new-notes">
+               <input type="text" class="form-control" id="new-notes" value="Good weather">
              </div>
 
              <button type="submit" class="btn">Add</button>
@@ -44,9 +44,8 @@
          </div>
            <div class="col-md-6">
             <div id="show-place">
-              <h2></h2>
+              <h2>Trip Report</h2>
 
-              <p>Place: <span class="places"></span></p>
               <p>Landmarks: <span class="landmarks"></span></p>
               <p>Date: <span class="date"></span></p>
               <p>Notes: <span class="notes"></span></p>
